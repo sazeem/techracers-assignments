@@ -1,7 +1,0 @@
-function(){
-
-	
-	return fs.readFile('file2.txt', function(err, data) {return data;});
-	
-
-}
