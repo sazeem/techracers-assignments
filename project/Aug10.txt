@@ -1,0 +1,275 @@
+let Mammal = function(legs){
+	this.legs = legs;
+};
+
+Mammal.prototype = {
+	walk(){
+  	return 'walking';
+  },sleep(){
+  	return 'sleeping';
+  }
+}
+
+let Bat = function(legs,isVegetarian){
+	Mammal.call(this,legs);
+  this.isVegetarian = isVegetarian;
+};
+
+console.dir(Bat);
+
+/* Bat.prototype = Object.create(Mammal.prototype); */
+
+/* console.dir(Bat); */
+
+/* Bat.prototype.constructor = Bat; */
+
+/* console.dir(Bat); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let myObj = {
+  AsyncCB(cb){
+    cb();
+  },
+  parse(){
+    console.log('parse-called');
+  },
+  render(){  	
+    this.AsyncCB(function(){
+      this.parse();
+    }.bind(this));
+  }
+}
+
+myObj.render();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let button = function(button){
+  this.button = button;
+};
+
+button.prototype.clicked = function(){
+  console.log(`${this.button} clicked!`);
+};
+
+let newbutton = new button('add');
+let loosebutton = newbutton.clicked;
+loosebutton();
+let boundbutton = newbutton.clicked.bind(newbutton)	;
+boundbutton();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let age = 23;
+let height = 171;
+
+let arr = []; 
+ 
+let func = function(strV,...vals){
+  console.log(strV);
+  console.log(vals);
+};
+
+func`Name's Azeem, age's ${age}, height's ${height}`; 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+let whatever = [`Azeem`, `Azeeeeeeeem!!`];
+let arr = [`Name's Azeem`,`Syed`,...whatever,`!`];
+
+
+console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let x = 'Ranger';
+console.log(`Name's ${x}, Power ${x}!`);
+let a = [1,2,3];
+let b = [4,5,6];
+Array.prototype.push.apply(a,b);
+[].push.apply(a,b);
+a.push(...b);
+console.log(a);
+
+  
+
+
+console.log('Hello,\n' + 'World!');
+console.log(`Hello,
+World!`);
+
+let min = Math.min(1,2,3);
+
+console.log(min);
+
+let val = [2,3,0.00009];
+
+let res = Math.min.apply(null,val);
+
+console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let argsToArray = function(){
+  console.log([].slice.call(arguments));
+};
+
+argsToArray(1,2,3,'a','b','c');
+const mammal = function (legs){
+  this.legs = legs;
+}
+
+const cat = function(legs, isDomesticated) {
+  mammal.call(this, legs);
+  this.isDomesticated = isDomesticated;
+}
+
+let lion = new cat(4, false);
+console.log(lion);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let obj = {num:4};
+let addToThis = function(a,b,c){
+  return this.num + a*b*c;
+};
+let arr = [1,2,3];
+let callResult = addToThis.call(obj,1,2,3);
+let applyResult = addToThis.apply(obj,arr);
+let bound = addToThis.bind(obj);
+
+console.log(callResult*applyResult);
+console.log(bound(1,2,3));
+console.log(1); */
